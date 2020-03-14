@@ -1,2 +1,3 @@
 /bot/token.js
 /node_modules/*
+*.swp
