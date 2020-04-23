@@ -7,6 +7,7 @@
  
  
 * copy your discord bot's token and paste it to /bot/token.js  
+  module.exports =  {token : '_YOUR_TOKEN_'}
 
 
 * at project root directory use  
