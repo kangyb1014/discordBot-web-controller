@@ -24,6 +24,37 @@ var deleteRow = function(row){
     });    
 }
 
+var putResponse = function(row){
+    objectID =  row.attr('objectID')
+    triggers_entry = row.contents().find('.triggers_entry')
+    response_entry = row.contents().find('.response_entry')
+    triggers_list = triggers_entry.val().split('\n')
+    response_list = response_entry.val().split('\n')
+    $.ajax({
+        "url": "/server/channel/trigger_response/"+objectID,
+        "type": "PUT",  
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+            "server": "server",
+            "channel": "channel",
+            "ping": triggers_list,
+            "pong": response_list
+        }),
+        success: function(result) {
+          if(result['nModified'] == 0){
+                alert('변경 없음')
+          }
+          else{
+                alert('변경 완료')
+          }
+          $.get('/server/channel/trigger_response/all',function(data){
+            refreshTriggerResponse(data)
+        })
+        }
+    });    
+}
 
 var postResponse = function(row){
     triggers_entry = row.contents().find('.triggers_entry')

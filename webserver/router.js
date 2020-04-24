@@ -1,6 +1,6 @@
 module.exports = function(app)
 {
-    var trigger_response = require('../models/trigger_response')
+    var trigger_response = require(__dirname+'/../models/trigger_response')
     
     app.get('/',function(req,res){
         res.render('index.html')
