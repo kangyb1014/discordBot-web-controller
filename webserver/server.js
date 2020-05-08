@@ -15,7 +15,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-var router = require(__dirname + '/router')(app);
+var router = require(__dirname + '/routes/router')(app);
 
 var server = app.listen(3000, function(){
     console.log("Express server has started on port 3000")

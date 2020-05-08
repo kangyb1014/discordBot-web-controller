@@ -1,0 +1,27 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var user_schema = new mongoose.Schema({
+	name: {
+     	type: String,
+      	allowNull: false
+    },
+    email: {
+      	type: String,
+      	allowNull: false,
+      	validate: {
+        isEmail: true
+      	},
+      	primaryKey: true
+    },
+    password: {
+      	type: String,
+      	allowNull: false
+    },
+    salt:{
+      	type: String
+    }
+});
+
+module.exports = mongoose.model('user',user_schema,'user');
+                                                                                                           
