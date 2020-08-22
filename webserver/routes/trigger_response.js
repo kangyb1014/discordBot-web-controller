@@ -40,6 +40,10 @@ module.exports = function(app)
     })
 
     app.delete('/server/channel/trigger_response/:id',function(req,res){
+        //null값 들어왔을때 레코드 삭제되는 예외처리
+        if({_id:req.params.id == null}){
+            return res.status(500).send({error: 'database failure'});
+        }
         trigger_response.deleteOne({_id:req.params.id},function(err,result){
             console.log(result)
             if(err) return res.status(500).send({error: 'database failure'});
