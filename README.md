@@ -1,5 +1,5 @@
 # discordBot-web-controller  
-디스코드 봇 응답을 웹페이지에서 제어  
+디스코드 봇 응답을 웹페이지에서 제어하는 프로젝트일지도  
 
 * requirements  
   node.js 12.0 or newer  
