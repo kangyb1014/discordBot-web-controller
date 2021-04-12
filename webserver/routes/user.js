@@ -16,7 +16,17 @@ module.exports = function(app){
 				if(err) return res.status(500).send({error: 'database failure'});
   	 			res.send(result);	
 		})  
-	})
+    })
+    
+    
+    //로그인 뷰
+    app.get('/login.ejs',function(req,res){
+        res.render('login.ejs')
+    })
+
+    //로그인 post
+    app.get("")
+
 }
 
 
