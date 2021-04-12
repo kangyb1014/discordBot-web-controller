@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var mongoose    = require('mongoose');
-var trigger_response = require('../models/trigger_response')
-const token = require('./token.js')
+var trigger_response = require(__dirname+'/../models/trigger_response')
+const token = require(__dirname+'/token.js')
 
 var dbURL = "mongodb://localhost:27017/discordBot";
 
