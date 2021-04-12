@@ -13,10 +13,10 @@
 * copy your discord bot's token and paste it to /bot/token.js  
   module.exports =  {token : '_YOUR_TOKEN_'}
   
-* 디스코드 봇 토큰을 bot/token.js에 붙여넣기합니다.
-  module.exports =  {token : '봇_토큰'}
-  봇 토큰은 다음 링크에서 확인할 수 있습니다.
-  https://discord.com/developers/applications
+* 디스코드 봇 토큰을 bot/token.js에 붙여넣기합니다. 
+  module.exports =  {token : '봇_토큰'} 
+  봇 토큰은 다음 링크에서 확인할 수 있습니다. 
+  https://discord.com/developers/applications 
   
   
 * at project root directory use  
